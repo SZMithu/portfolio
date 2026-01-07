@@ -1,5 +1,6 @@
 import { ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Download } from 'lucide-react';
 
 const projects = [
   {
@@ -122,6 +123,20 @@ export const PortfolioSection = () => {
             ))}
           </div>
         </div>
+        <div className="animate-fade-in-up animate-delay-300 flex flex-col sm:flex-row justify-center items-center mt-12">
+            <Button
+              onClick={() => {
+                const element = document.querySelector('#contact');
+                element?.scrollIntoView({ behavior: 'smooth' });
+              }}
+              size="lg"
+              variant="outline"
+              className="border-border text-foreground hover:bg-muted px-8"
+            >
+              <Download className="mr-2 h-4 w-4" />
+              Get In Touch
+            </Button>
+          </div>
       </div>
     </section>
   );

@@ -84,7 +84,7 @@ export const HeroSection = () => {
               <p className="text-muted-foreground text-sm">Years Exp.</p>
             </div>
             <div className="text-center">
-              <p className="font-display text-3xl md:text-4xl text-primary">50+</p>
+              <p className="font-display text-3xl md:text-4xl text-primary">23+</p>
               <p className="text-muted-foreground text-sm">Projects</p>
             </div>
             <div className="text-center">
