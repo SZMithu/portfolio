@@ -1,3 +1,7 @@
+## Your site is live at 
+https://szmithu.github.io/portfolio/
+
+
 ## Project info
 
 **Use your preferred IDE**
