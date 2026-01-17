@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { motion, useScroll, useSpring } from 'framer-motion';
+
 
 const navLinks = [
   { name: 'Home', href: '#home' },
@@ -13,6 +15,15 @@ const navLinks = [
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress,
+    {
+        stiffness: 100,
+        damping: 30,
+        restDelta: 0.001,
+    }
+  )
 
   useEffect(() => {
     const handleScroll = () => {
@@ -99,6 +110,10 @@ export const Navbar = () => {
           </div>
         </div>
       )}
+      
+     <motion.div 
+     className="progress-bar bg-primary h-0.5 origin-left bottom-0 left-0 right-0 fixed" 
+     style={{ scaleX }} />
     </nav>
   );
 };
