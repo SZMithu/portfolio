@@ -54,7 +54,7 @@ export const Navbar = () => {
             e.preventDefault();
             scrollToSection('#home');
           }}
-          className="font-display text-2xl md:text-3xl tracking-wider text-foreground hover:text-primary transition-colors"
+          className="font-display text-2xl md:text-3xl tracking-wider text-foreground hover:text-primary transition-colors mansalva-regular"
         >
           SARWAR<span className="text-primary">.</span>
         </a>

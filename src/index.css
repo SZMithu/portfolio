@@ -1,5 +1,6 @@
 @import '@fontsource/bebas-neue';
 @import '@fontsource/inter';
+@import url('https://fonts.googleapis.com/css2?family=Mansalva&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -241,3 +242,10 @@
 .stagger-children.active > *:nth-child(4) { transition-delay: 300ms; opacity: 1; transform: translateY(0); }
 .stagger-children.active > *:nth-child(5) { transition-delay: 400ms; opacity: 1; transform: translateY(0); }
 .stagger-children.active > *:nth-child(6) { transition-delay: 500ms; opacity: 1; transform: translateY(0); }
+
+
+.mansalva-regular {
+  font-family: "Mansalva", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}

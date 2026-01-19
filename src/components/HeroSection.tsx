@@ -38,13 +38,13 @@ export const HeroSection = () => {
             <span className="mr-8">
              Hi I'm
             </span>  
-            <span className="text-gradient mb-4 leading-none">
+            <span className="text-gradient mb-4 leading-none mansalva-regular">
                SARWAR
             </span>         
           </h3>
           <p className='mb-4'>
             <Typewriter options={{
-              strings: ["A Full Stack Web Developer", "PHP | Laravel | React.js", "API Integration Specialist"],
+              strings: ["A Full Stack Web Dev", "PHP | Laravel | React.js", "RestFull, API Specialist", "Database, Server Management"],
               autoStart: true,
               loop: true,
             }}
