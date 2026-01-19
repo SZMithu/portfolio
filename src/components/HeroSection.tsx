@@ -1,5 +1,6 @@
 import { ArrowDown, Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import Typewriter from 'typewriter-effect';
 
 export const HeroSection = () => {
   const scrollToAbout = () => {
@@ -33,17 +34,22 @@ export const HeroSection = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="animate-fade-in-up">
-            <p className="text-primary font-medium mb-4 tracking-wider uppercase text-sm md:text-base">
-              Full Stack Web Developer
-            </p>
-          </div>
-
-          <h1 className="animate-fade-in-up animate-delay-100 font-display text-5xl md:text-7xl lg:text-8xl text-foreground mb-6 leading-none">
-            MD. SARWAR
-            <br />
-            <span className="text-gradient">ZAHAN</span>
-          </h1>
+          <h3 className="animate-fade-in-up animate-delay-100 text-4xl md:text-5xl lg:text-7xl text-foreground mb-4 leading-none font-mono">  
+            <span className="mr-8">
+             Hi I'm
+            </span>  
+            <span className="text-gradient mb-4 leading-none">
+               SARWAR
+            </span>         
+          </h3>
+          <p className='mb-4'>
+            <Typewriter options={{
+              strings: ["A Full Stack Web Developer", "PHP | Laravel | React.js", "API Integration Specialist"],
+              autoStart: true,
+              loop: true,
+            }}
+            /> 
+          </p>
 
           <p className="animate-fade-in-up animate-delay-200 text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto mb-8 leading-relaxed">
             Crafting robust web solutions with{' '}
