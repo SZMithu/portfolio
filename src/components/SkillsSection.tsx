@@ -8,6 +8,7 @@ import {
   useVelocity,
   useAnimationFrame
 } from "framer-motion";
+import useCardTiltEffect from "@/hooks/useCardTiltEffect";
 
 interface ParallaxProps {
   children: React.ReactNode;
@@ -166,6 +167,8 @@ export const SkillsSection = () => {
     { text: 'Server Management', color: 'primary' },
   ];
 
+   useCardTiltEffect();
+
   return (
     <section id="skills" className="section-padding bg-muted/30">
       <div className="container mx-auto px-4">
@@ -189,14 +192,15 @@ export const SkillsSection = () => {
           <div className="grid md:grid-cols-3 gap-8">
             {/* Languages */}
             <motion.div 
-              className="bg-gradient-card p-8 rounded-2xl border border-border"
+              className="bg-gradient-card p-8 rounded-2xl border border-border card"
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
+              style={{ "transformStyle": "preserve-3d", "transform": "perspective(1000px)" }}
             >
               <h3 className="font-display text-2xl text-foreground mb-6">Languages</h3>
-              <div className="space-y-5">
+              <div className="space-y-5" style={{ "transform": "translateZ(40px)" }}>
                 {skills.languages.map((skill, index) => (
                   <motion.div
                     key={skill.name}
@@ -213,14 +217,15 @@ export const SkillsSection = () => {
 
             {/* Frameworks */}
             <motion.div 
-              className="bg-gradient-card p-8 rounded-2xl border border-border"
+              className="bg-gradient-card p-8 rounded-2xl border border-border card"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
+              style={{ "transformStyle": "preserve-3d", "transform": "perspective(1000px)" }}
             >
               <h3 className="font-display text-2xl text-foreground mb-6">Frameworks</h3>
-              <div className="space-y-5">
+              <div className="space-y-5" style={{ "transform": "translateZ(40px)" }}>
                 {skills.frameworks.map((skill, index) => (
                   <motion.div
                     key={skill.name}
@@ -237,14 +242,15 @@ export const SkillsSection = () => {
 
             {/* Tools */}
             <motion.div 
-              className="bg-gradient-card p-8 rounded-2xl border border-border"
+              className="bg-gradient-card p-8 rounded-2xl border border-border card"
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.3 }}
+              style={{ "transformStyle": "preserve-3d", "transform": "perspective(1000px)" }}
             >
               <h3 className="font-display text-2xl text-foreground mb-6">Tools & More</h3>
-              <div className="space-y-5">
+              <div className="space-y-5" style={{ "transform": "translateZ(40px)" }}>
                 {skills.tools.map((skill, index) => (
                   <motion.div
                     key={skill.name}
