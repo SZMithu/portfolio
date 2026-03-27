@@ -1,6 +1,10 @@
 import { ArrowDown, Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Typewriter from 'typewriter-effect';
+import { Canvas } from '@react-three/fiber';
+import { Computer } from './Computer';
+import { OrbitControls, PerspectiveCamera } from '@react-three/drei';
+import { Suspense } from 'react';
 
 export const HeroSection = () => {
   const scrollToAbout = () => {
@@ -13,7 +17,7 @@ export const HeroSection = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero"
     >
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -32,8 +36,8 @@ export const HeroSection = () => {
         }}
       />
 
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
+      <div className="container mx-auto px-4 relative z-10 flex items-center justify-between overflow-visible">
+        <div className="max-w-4xl me-auto text-center">
           <h3 className="animate-fade-in-up animate-delay-100 text-4xl md:text-5xl lg:text-7xl text-foreground mb-4 leading-none font-mono">  
             <span className="mr-8">
              Hi I'm
@@ -42,14 +46,14 @@ export const HeroSection = () => {
                SARWAR
             </span>         
           </h3>
-          <p className='mb-4'>
+          <div className='mb-4'>
             <Typewriter options={{
               strings: ["A Full Stack Web Dev", "PHP | Laravel | React.js", "RestFull, API Specialist", "Database, Server Management"],
               autoStart: true,
               loop: true,
             }}
             /> 
-          </p>
+          </div>
 
           <p className="animate-fade-in-up animate-delay-200 text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto mb-8 leading-relaxed">
             Crafting robust web solutions with{' '}
@@ -99,12 +103,24 @@ export const HeroSection = () => {
             </div>
           </div>
         </div>
+
+        {/* 3D Canvas */}
+        <div className="w-1/2 h-[500px] absolute inset-0 z-0 ms-auto animate-fade-in-up animate-delay-100 flex align-middle justify-center" style={{ background: 'transparent' }}>
+          <Canvas className="w-full overflow-visible">
+              <PerspectiveCamera makeDefault position={[5, 2, 10]} />
+              <ambientLight intensity={1} />
+              <Suspense fallback={null}> 
+               <Computer scale={0.6} />
+               </Suspense>
+              <OrbitControls enableZoom={true} autoRotate autoRotateSpeed={1} />
+           </Canvas>
+          </div>
       </div>
 
       {/* Scroll indicator */}
       <button
         onClick={scrollToAbout}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-muted-foreground hover:text-primary transition-colors animate-bounce"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-muted-foreground hover:text-primary transition-colors animate-bounce z-10"
       >
         <ArrowDown size={24} />
       </button>

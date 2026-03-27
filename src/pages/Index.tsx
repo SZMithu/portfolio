@@ -6,6 +6,7 @@ import { SkillsSection } from '@/components/SkillsSection';
 import { PortfolioSection } from '@/components/PortfolioSection';
 import { ContactSection } from '@/components/ContactSection';
 import { Footer } from '@/components/Footer';
+import { Loading } from '@/components/Loading';
 
 const Index = () => {
   const containerRef = useScrollReveal();
@@ -13,6 +14,7 @@ const Index = () => {
   return (
     <div ref={containerRef} className="min-h-screen bg-background">
       <Navbar />
+      <Loading />
       <HeroSection />
       <AboutSection />
       <SkillsSection />
