@@ -47,9 +47,9 @@ export const AboutSection = () => {
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
                   I'm a passionate Full Stack Web Developer with over{' '}
-                  <span className="text-foreground font-medium">3 years of experience</span>{' '}
+                  <span className="text-foreground font-medium">4 years of experience</span>{' '}
                   building modern web applications. As a{' '}
-                  <span className="text-primary font-semibold">Top Rated Plus</span> freelancer on
+                  <span className="text-primary font-semibold">Top Rated</span> freelancer on
                   Upwork, I've helped businesses transform their ideas into reality.
                 </p>
                 <p>

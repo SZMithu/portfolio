@@ -59,9 +59,9 @@ export const HeroSection = () => {
 
             <p className="animate-fade-in-up animate-delay-200 text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto mb-8 leading-relaxed">
               Crafting robust web solutions with{' '}
-              <span className="text-foreground font-medium">3+ years</span> of experience.
+              <span className="text-foreground font-medium">4+ years</span> of experience.
               <br className="hidden sm:block" />
-              <span className="text-primary font-semibold">Top Rated Plus</span> on Upwork
+              <span className="text-primary font-semibold">Top Rated</span> freelancer on Upwork
             </p>
 
             <div className="animate-fade-in-up animate-delay-300 flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -92,7 +92,7 @@ export const HeroSection = () => {
             {/* Stats */}
             <div className="animate-fade-in-up animate-delay-400 mt-16 grid grid-cols-3 gap-8 max-w-lg mx-auto">
               <div className="text-center">
-                <p className="font-display text-3xl md:text-4xl text-primary">3+</p>
+                <p className="font-display text-3xl md:text-4xl text-primary">4+</p>
                 <p className="text-muted-foreground text-sm">Years Exp.</p>
               </div>
               <div className="text-center">
@@ -101,7 +101,7 @@ export const HeroSection = () => {
               </div>
               <div className="text-center">
                 <p className="font-display text-3xl md:text-4xl text-primary">100%</p>
-                <p className="text-muted-foreground text-sm">Satisfaction</p>
+                <p className="text-muted-foreground text-sm">Success Rate</p>
               </div>
             </div>
           </div>
