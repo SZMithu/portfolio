@@ -36,7 +36,7 @@ export const HeroSection = () => {
         }}
       />
 
-      <div className="container mx-auto px-4 relative z-10 flex items-center justify-between overflow-visible">
+      <div className="container mx-auto px-4 relative z-10 flex items-center justify-between overflow-hidden">
         <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
           
           <div className="max-w-4xl me-auto text-center">

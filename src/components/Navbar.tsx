@@ -43,7 +43,7 @@ export const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`sticky top-0 left-0 right-0 z-50 transition-all duration-300 mb-2 md:mb-0 ${
         isScrolled ? 'glass py-3' : 'bg-transparent py-5'
       }`}
     >
