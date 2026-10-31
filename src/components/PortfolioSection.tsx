@@ -9,6 +9,7 @@ const projects = [
     description: 'AI-driven SaaS tool for content management built with Laravel. Features advanced AI integrations for automated content creation and management For Faceboook, GMB, WordPress, Wix and Shopify.',
     tech: ['Laravel', 'PHP', 'MySQL', 'AI Integration', 'cPanel'],
     url: 'https://app.jaxi.ai',
+    mainSite: 'https://jaxi.ai',
     category: 'SaaS',
   },
   {
@@ -30,6 +31,7 @@ const projects = [
     description: 'AI-driven SaaS tool for financial services built with Laravel. Features advanced AI integrations for automated loan processing and financial analysis.',
     tech: ['Laravel', 'Livewire', 'MySQL', 'AI Integration', 'cPanel'],
     url: 'https://app.msfg.finance/',
+    mainSite: 'https://msfg.finance/',
     category: 'SaaS',
   },
   {
@@ -37,6 +39,7 @@ const projects = [
     description: 'AI-driven SaaS tool for Google My Business management built with Laravel and Livewire. Features advanced AI integrations for automated content(Localpost and review reply) creation and management.',
     tech: ['Laravel', 'PHP', 'MySQL', 'AI Integration', 'VPS'],
     url: 'https://localseocore.com/',
+    mainSite: 'https://advancedcarinspections.com/',
     category: 'SaaS',
   },
   {
@@ -152,6 +155,21 @@ export const PortfolioSection = () => {
                     View Project <ExternalLink className="ml-2 h-4 w-4" />
                   </a>
                 </Button>
+                {project.mainSite && (
+                  <>
+                    <small className="block text-center my-2">or</small>
+
+                    <Button asChild variant="outline" className="w-full">
+                      <a
+                        href={project.mainSite}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Visit Main Site <ExternalLink className="ml-2 h-4 w-4" />
+                      </a>
+                    </Button>
+                  </>
+                )}
               </div>
             ))}
             {/* <div className="w-screen" /> */}
